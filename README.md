@@ -12,7 +12,7 @@ This React-based Memory Game is a fun side project that challenges your memory a
 
 ## Demo
 
-[Insert a link to the live demo of your app here, if available.]
+[https://insidedw.github.io/memory-game/]
 
 ## Features
 
