@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 768px;
+    margin: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section {
+    flex-grow: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    height: 80vh;
+    justify-items: center;
+    transform-style: preserve-3d;
+    perspective: 800px;
 }
 
-.App-link {
-  color: #61dafb;
+.item {
+    background: #7c7979;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 6rem;
+    transition: 1s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item.flipped {
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.item.matched {
+    transform: rotate3d(0, 1, 0, 180deg);
+    border: 1px solid #faebd7;
+}
+
+@keyframes shaking {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.item.flipped.shaking, .item.matched.shaking {
+   animation: shaking 0.5s linear;
+}
+
+.emoji {
+    opacity: 0.8;
+}
+
+.emoji.flipped, .emoji.matched {
+    opacity: 1;
+}
+
+footer {
+    padding-bottom: 1rem;
+}
+
+.author {
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 2px;
+}
+
+.author:visited {
+    color: white;
+}
+
+@media only screen and (max-width: 670px) {
+    .item {
+        font-size: 3rem;
+    }
+    .board {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .item {
+        font-size: 3rem;
+    }
+    .board {
+        height: 50vh;
+    }
 }
