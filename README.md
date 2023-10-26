@@ -1,5 +1,3 @@
-Creating a README.md file is an important part of documenting your React app side project, especially if you plan to collaborate with others or share your project with the community. Below is a template for your README.md file. You can customize it to fit your project's specifics:
-
 # Memory Game React App
 
 This React-based Memory Game is a fun side project that challenges your memory and concentration skills. The game presents a grid of cards, each with a different image. Your goal is to match pairs of identical cards by flipping them over. The game tracks your score and time, making it a great way to exercise your brain and have some fun!
@@ -20,7 +18,6 @@ This React-based Memory Game is a fun side project that challenges your memory a
 
 - Interactive memory game with a user-friendly interface.
 - Customizable grid size to make the game more challenging.
-- Score tracking to keep a record of your performance.
 - Timer to see how quickly you can complete the game.
 - Responsive design for a seamless experience on different devices.
 
@@ -31,7 +28,7 @@ Follow these steps to set up the project on your local machine:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/memory-game-react.git
+    git clone https://github.com/insidedw/memory-game.git
     ```
 
 2. Navigate to the project directory:
